@@ -12,8 +12,8 @@ import {
 function App() {
   return (
     <Router>
+      <Header/>
       <Switch>
-        <Header/>
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/404" component={PageError}/>
         <Redirect path="*" to="/404"/>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Flex} from "@chakra-ui/react";
+import {Flex, Text} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 export default function header() {
@@ -9,17 +9,21 @@ export default function header() {
       align="center"
       justify="space-between"
       overflow="hidden"
-      position="fixed"
       top="0"
       width="100%"
       wrap="wrap"
-      padding="1rem"
+      padding="10px"
       bg="white"
       boxShadow="lg"
-      marginBottom="15px">
+      marginBottom="25px">
       <Flex align="center" mr={5}>
       <Link to="/">
-        Color Gallery
+        <Text
+          fontWeight="Bold"
+          fontSize="x-large"
+          >
+          Color Gallery
+        </Text>
       </Link>
       </Flex>
     </Flex>
