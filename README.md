@@ -1,4 +1,4 @@
-# React-Pokemon
+# Color-Gallery
 
 This application generate random color and filtered by "category".
 

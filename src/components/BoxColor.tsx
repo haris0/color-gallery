@@ -9,7 +9,6 @@ function BoxColor({ color }: BoxProps) {
   return (
     <div>
       <Box height="100px" bg={color}>
-        
       </Box>
       <Text>
           {color}

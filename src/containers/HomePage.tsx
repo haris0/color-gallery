@@ -41,7 +41,6 @@ export default function HomePage() {
   const [colors, setColors] = useState<{ [key: string]: string[]; }>(getRandomColor(40));
   const [selectedColors, setSelectedColors] = useState<string[]>([]);
 
-
   useEffect(()=>{
     setSelectedColors(colors[category])
   },[category])
