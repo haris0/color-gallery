@@ -1,18 +1,26 @@
 import React from 'react'
 import { Box, Text} from '@chakra-ui/react';
 
-type BoxProps = {
-  color: string,
+type colorAtt = {
+  name: string,
+  code: string
 }
 
-function BoxColor({ color }: BoxProps) {
+type BoxProps = {
+  colors: colorAtt[]
+}
+
+function BoxColor({colors}:BoxProps) {
   return (
     <div>
-      <Box height="100px" bg={color}>
+      <Box marginTop="15px">
+        {colors.map(color => (
+          <Box>
+            <Text> {color.name} </Text>
+            <Box height="50px" bg={color.code} cursor="pointer"></Box>
+          </Box>
+        ))}
       </Box>
-      <Text>
-          {color}
-      </Text>
     </div>
   )
 }
