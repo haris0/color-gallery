@@ -1,6 +1,6 @@
 # Color-Gallery
 
-This application generate random color and filtered by "category".
+This application show color palette and you can copy hex code of selected color. You can check demo [here](https://color-gallery.netlify.app/)
 
 ## Preview
 ![page1](./Preview.png)
