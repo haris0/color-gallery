@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Text} from '@chakra-ui/react';
+import { Box, Text, useToast} from '@chakra-ui/react';
+import copy from 'copy-to-clipboard';
 
 type colorAtt = {
   name: string,
@@ -11,13 +12,43 @@ type BoxProps = {
 }
 
 function BoxColor({colors}:BoxProps) {
+
+  const toast = useToast()
+  const copiedCodeToast =(code:string)=> {
+    toast({
+      position: "bottom",
+      title: code + " Copied to clipboard!",
+      status: "info",
+      duration: 2000,
+    })
+  }
+
+  const copyCode = (code:string) => (event: any) =>{
+    copy(code);
+    copiedCodeToast(code)
+  }
+
   return (
     <div>
       <Box marginTop="15px">
         {colors.map(color => (
-          <Box>
+          <Box onClick={copyCode(color.code)}>
             <Text> {color.name} </Text>
-            <Box height="50px" bg={color.code} cursor="pointer"></Box>
+            <Box 
+              height="50px" 
+              bg={color.code}
+              cursor="pointer">
+              <Box
+                width="85px"
+                textAlign="center"
+                float="right"
+                fontSize="10px"
+                padding="5px"
+                bg="black"
+                color="white">
+                {"Copy "+color.code}
+              </Box>
+            </Box>
           </Box>
         ))}
       </Box>

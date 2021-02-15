@@ -14,7 +14,8 @@ export default function header() {
       width="100%"
       wrap="wrap"
       padding="1rem"
-      bg="white"
+      borderTop="solid 3px deepskyblue"
+      bg="black"
       boxShadow="lg"
       marginBottom="15px">
       <Flex align="center" mr={5}>
@@ -22,7 +23,7 @@ export default function header() {
         <Heading
           as="h3" 
           size="md"
-          color="#6A5ACD">
+          color="white">
           Color Gallery
         </Heading>
       </Link>
