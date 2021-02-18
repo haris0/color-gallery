@@ -16,7 +16,7 @@ function BoxColor({colors}:BoxProps) {
   const toast = useToast()
   const copiedCodeToast =(code:string)=> {
     toast({
-      position: "bottom",
+      position: "top",
       title: code + " Copied to clipboard!",
       status: "info",
       duration: 2000,
@@ -32,7 +32,7 @@ function BoxColor({colors}:BoxProps) {
     <div>
       <Box marginTop="15px">
         {colors.map(color => (
-          <Box onClick={copyCode(color.code)}>
+          <Box key={color.code} onClick={copyCode(color.code)}>
             <Text> {color.name} </Text>
             <Box 
               height="50px" 

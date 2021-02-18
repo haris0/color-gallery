@@ -7,7 +7,6 @@ export const ColorList : colorType[] = [
   {
     name:"Blue",
     colors:[
-      {name: "Aqua", code: "#00FFFF"},
       {name: "Cyan", code: "#00FFFF"},
       {name: "LightCyan", code: "#E0FFFF"},
       {name: "PaleTurquoise", code: "#AFEEEE"},
@@ -70,7 +69,6 @@ export const ColorList : colorType[] = [
       {name: "Plum", code: "#DDA0DD"},
       {name: "Violet", code: "#EE82EE"},
       {name: "Orchid", code: "#DA70D6"},
-      {name: "Fuchsia", code: "#FF00FF"},
       {name: "Magenta", code: "#FF00FF"},
       {name: "MediumOrchid", code: "#BA55D3"},
       {name: "MediumPurple", code: "#9370DB"},
